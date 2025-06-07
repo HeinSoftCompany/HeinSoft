@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeinSoft - Soluções Tecnológicas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- Navbar Atualizada -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">HeinSoft</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+                <!-- Botão Dark Mode no Navbar (Desktop) -->
+                <button class="dark-mode-toggle d-none d-lg-inline-block" id="darkModeNav">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <!-- Botão Dark Mode no Menu Mobile -->
+                <div class="d-lg-none">
+                    <button class="dark-mode-toggle w-100 text-start" id="darkModeMobile">
+                        <i class="fas fa-moon me-2"></i> Modo Escuro
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Home -->
+    <section id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-1 order-2 mt-lg-0 mt-4">
+                    <h1 class="display-4 fw-bold mb-4">Soluções Tecnológicas Inovadoras</h1>
+                    <p class="lead mb-4">Criamos experiências digitais excepcionais que impulsionam seu negócio para o próximo nível.</p>
+                    <a href="#contato" class="btn btn-primary btn-lg">Fale Conosco</a>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Tecnologia" class="img-fluid rounded shadow" id="home-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Portfolio -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Nosso Portfolio</h2>
+                <p class="text-muted">Confira alguns dos nossos trabalhos recentes</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-card">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" class="card-img-top" alt="Projeto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Sistema de Gestão</h5>
+                            <p class="card-text text-muted">Plataforma completa para gestão empresarial com dashboard interativo.</p>
+                            <a href="#" class="btn btn-sm btn-primary">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-card">
+                        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1636&q=80" class="card-img-top" alt="Projeto 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Aplicativo Mobile</h5>
+                            <p class="card-text text-muted">Aplicativo de produtividade com sincronização em tempo real.</p>
+                            <a href="#" class="btn btn-sm btn-primary">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-card">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" class="card-img-top" alt="Projeto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Website Corporativo</h5>
+                            <p class="card-text text-muted">Site institucional com design responsivo e alto desempenho.</p>
+                            <a href="#" class="btn btn-sm btn-primary">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="fw-bold mb-4">Entre em Contato</h2>
+                    <p class="mb-4">Tem um projeto em mente ou quer saber mais sobre nossos serviços? Preencha o formulário ou entre em contato diretamente pelos nossos canais.</p>
+                    
+                    <div class="mb-4">
+                        <h5 class="fw-bold"><i class="fas fa-map-marker-alt me-2"></i> Endereço</h5>
+                        <p class="text-muted">Av. Tecnológica, 1234 - São Paulo/SP</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5 class="fw-bold"><i class="fas fa-phone me-2"></i> Telefone</h5>
+                        <p class="text-muted">(11) 98765-4321</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5 class="fw-bold"><i class="fas fa-envelope me-2"></i> Email</h5>
+                        <p class="text-muted">contato@heinsoft.com.br</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <form action="https://formsubmit.co/seu-email@heinsoft.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://heinsoft.com/obrigado.html">
+                        
+                        <div class="mb-3">
+                            <input type="text" name="name" class="form-control" placeholder="Seu nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" name="email" class="form-control" placeholder="Seu email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="_subject" class="form-control" placeholder="Assunto">
+                        </div>
+                        <div class="mb-3">
+                            <textarea name="message" class="form-control" rows="5" placeholder="Sua mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span class="submit-text">Enviar Mensagem</span>
+                            <span class="loading d-none">
+                                <span class="spinner-border spinner-border-sm" role="status"></span>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="social-icons mb-4">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="mb-0">© 2025 HeinSoft. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botão flutuante (apenas mobile) -->
+    <button id="darkModeFloat" class="btn position-fixed bottom-0 end-0 m-3 z-3 d-lg-none" style="background-color: #5a7a92; color: #121212;">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+    <script>
+        // Função para alternar o modo escuro
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+            
+            // Atualizar todos os botões
+            document.querySelectorAll('.dark-mode-toggle, #darkModeFloat').forEach(btn => {
+                btn.innerHTML = isDarkMode ? 
+                    '<i class="fas fa-sun"></i>' + (btn.id === 'darkModeMobile' ? ' Modo Claro' : '') : 
+                    '<i class="fas fa-moon"></i>' + (btn.id === 'darkModeMobile' ? ' Modo Escuro' : '');
+            });
+        }
+
+        // Verificar preferência salva
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+            document.querySelectorAll('.dark-mode-toggle, #darkModeFloat').forEach(btn => {
+                btn.innerHTML = '<i class="fas fa-sun"></i>' + (btn.id === 'darkModeMobile' ? ' Modo Claro' : '');
+            });
+        }
+
+        // Event listeners para todos os botões
+        document.querySelectorAll('.dark-mode-toggle, #darkModeFloat').forEach(btn => {
+            btn.addEventListener('click', toggleDarkMode);
+        });
+
+        // [Manter as outras funções JavaScript]
+    </script>
+</body>
+</html>
