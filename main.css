@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* config setup styles*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+            --dark: #222222;
+            --gray: #7b7b7b;
+            --primary: #728da2;
+            --light: #f8f8f8;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            transition: all 0.3s ease;
+        }
+        
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        
+        body.dark-mode #portfolio {
+            background-color: #1e1e1e;
+        }
+        
+        body.dark-mode .portfolio-card {
+            background-color: #2d2d2d;
+            color: #fff;
+        }
+        
+        body.dark-mode .form-control {
+            background-color: #2d2d2d;
+            color: #fff;
+            border-color: #444;
+        }
+        
+        /* Novo estilo para o toggle no navbar */
+        .dark-mode-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 8px 10px;
+            margin-left: 10px;
+        }
+        
+        .dark-mode-toggle:hover {
+            color: var(--light);
+        }
+        
+        /* Ajuste para o toggle no menu mobile */
+        @media (max-width: 991.98px) {
+            .dark-mode-toggle {
+                display: block;
+                width: 100%;
+                text-align: left;
+                padding: 10px 15px;
+                color: var(--dark);
+            }
+            
+            .dark-mode .dark-mode-toggle {
+                color: white;
+            }
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--primary);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .navbar-nav .nav-link {
+            color: white;
+            font-weight: 500;
+            margin: 0 10px;
+            position: relative;
+            padding: 8px 0;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--light);
+        }
+        
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: white;
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Seções */
+        section {
+            padding: 80px 0;
+            transition: all 0.3s ease;
+        }
+        
+        #home {
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        body.dark-mode #home {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+        }
+        
+        #portfolio {
+            background-color: white;
+        }
+        
+        #contato {
+            background-color: var(--light);
+        }
+        
+        /* Cards Portfolio */
+        .portfolio-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .portfolio-card img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        .portfolio-card .card-body {
+            padding: 20px;
+        }
+        
+        /* Formulário */
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            box-shadow: none;
+            border-color: var(--primary);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        
+        .btn-primary:hover {
+            background-color: #5a7a92;
+        }
+        
+        .loading {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 30px 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.2rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: var(--light);
+        }
+        
+        /* Dark Mode Toggle */
+        #darkModeBtn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Responsividade - Mobile First */
+        @media (max-width: 767.98px) {
+            section {
+                padding: 50px 0;
+            }
+            
+            #home {
+                text-align: center;
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+            
+            #home .row {
+                flex-direction: column-reverse;
+            }
+            
+            #home img {
+                margin-bottom: 30px;
+                max-height: 300px;
+                object-fit: contain;
+            }
+            
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+            
+            .portfolio-card {
+                margin-bottom: 20px;
+            }
+            
+            #contato .row {
+                flex-direction: column;
+            }
+            
+            #contato .col-lg-6:first-child {
+                margin-bottom: 40px;
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .portfolio-card img {
+                height: 150px;
+            }
+            
+            #home h1 {
+                font-size: 2.5rem;
+            }
+        }
