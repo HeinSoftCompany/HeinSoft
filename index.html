@@ -1,129 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HeinSoft Company</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUa6mY5hFQ2DF5P3T5fQp1dgtT9I7MQxXclQv9KKw5yX5oZcQF6tztYhoh7P" crossorigin="anonymous">
-  <link rel="stylesheet" href="main.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font & Estilo -->
+  <link rel="stylesheet" href="main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="/">
-          <img src="logo.svg" alt="HeinSoft Logo" height="40">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Alternar navegação">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-            <li class="nav-item"><a class="nav-link" href="#portfolio">Serviços</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
-          </ul>
-          <a href="#get-started" class="btn btn-primary ms-lg-3">Entre em Contato</a>
-        </div>
+
+  <!-- Cabeçalho -->
+  <header class="bg-white shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg container">
+      <a class="navbar-brand" href="/">
+        <img src="logo.svg" alt="HeinSoft Logo" height="40" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+        </ul>
+        <a href="#get-started" class="btn btn-primary ms-lg-3">Entre em Contato</a>
       </div>
     </nav>
   </header>
 
-  <section id="home" class="bg-light py-5">
-    <div class="container text-center">
-      <h1 class="display-4">Cada detalhe é projetado!</h1>
-      <p class="lead">Criamos seu site nos mínimos detalhes, trazendo total experiência personalizada</p>
-      <div class="mt-4">
-        <a href="#learn-more" class="btn btn-primary btn-lg me-2">Learn More</a>
-        <a href="#demo" class="btn btn-outline-secondary btn-lg">See Demo</a>
+  <!-- Principal -->
+  <main>
+    <!-- Hero -->
+    <section class="hero text-center py-5" id="home">
+      <div class="container">
+        <h1 class="display-4">Cada detalhe é projetado!</h1>
+        <p class="lead">Criamos experiências únicas com atenção aos mínimos detalhes.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+          <a href="#learn-more" class="btn btn-primary btn-lg">Learn More</a>
+          <a href="#demo" class="btn btn-outline-secondary btn-lg">See Demo</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="about" class="py-5">
-    <div class="container text-center">
-      <h3 class="text-muted">Especialista em criar sites</h3>
-      <h1 class="mb-3">Empoderando sua jornada no digital</h1>
-      <p class="mb-4">Veja nosso trabalho</p>
-      <div class="mockup-container">
-        <img src="https://placehold.co/800x500" alt="Beautiful modern website mockup" class="img-fluid rounded shadow-sm">
+    <!-- Sobre -->
+    <section id="about" class="bg-light py-5 text-center">
+      <div class="container">
+        <h3 class="text-muted">Especialista em criar websites</h3>
+        <h1 class="mb-3">Empowering your digital journey</h1>
+        <p class="mb-4">Discover our work</p>
+        <div class="mockup-container mx-auto">
+          <img src="https://placehold.co/800x500" alt="Website mockup" class="img-fluid rounded shadow" />
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="portfolio" class="py-5 bg-white">
+    <!-- Portfólio -->
+    <section id="portfolio" class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="portfolio-card text-center">
+              <div class="card-image">
+                <img src="images/custom-design.jpg" alt="Custom Design" />
+              </div>
+              <h4>Custom Design</h4>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="portfolio-card text-center">
+              <div class="card-image">
+                <img src="images/responsive-site.jpg" alt="Responsive Site" />
+              </div>
+              <h4>Responsive Site</h4>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="portfolio-card text-center">
+              <div class="card-image">
+                <img src="images/optimization-tests.jpg" alt="Optimization Tests" />
+              </div>
+              <h4>Optimization Tests</h4>
+            </div>
+          </div>
+          <div class="col-12 text-center">
+            <button class="quote-button mt-3">Peça um orçamento</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact" class="contact-section py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-3">Whatsapp</h2>
+        <p class="text-center mb-4">Preencha o formulário abaixo para falar com a gente.</p>
+        <form id="contact-form" class="row g-3 mx-auto" method="POST" style="max-width:600px;">
+          <div class="col-12">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Seu nome" required />
+          </div>
+          <div class="col-12">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Seu e-mail" required />
+          </div>
+          <div class="col-12">
+            <label for="phone" class="form-label">Número de telefone</label>
+            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Seu telefone" />
+          </div>
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary btn-lg submit-btn">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-light text-center py-4">
     <div class="container">
-      <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100">
-            <img src="images/custom-design.jpg" class="card-img-top" alt="Custom Design">
-            <div class="card-body text-center">
-              <h5 class="card-title">Custom Design</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100">
-            <img src="images/responsive-site.jpg" class="card-img-top" alt="Responsive Site">
-            <div class="card-body text-center">
-              <h5 class="card-title">Sites responsivos</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100">
-            <img src="images/optimization-tests.jpg" class="card-img-top" alt="Optimization Tests">
-            <div class="card-body text-center">
-              <h5 class="card-title">Testes de otimização</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 text-center">
-          <button class="btn btn-outline-secondary btn-lg">Peça um orçamento</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="py-5">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <h2 class="mb-3">Whatsapp</h2>
-          <p class="mb-4">Preencha as informações e envie</p>
-          <form id="contact-form" action="#" method="POST" class="row g-3">
-            <div class="col-12">
-              <label for="name" class="form-label">Nome</label>
-              <input type="text" id="name" name="name" class="form-control" placeholder="Seu nome" required>
-            </div>
-            <div class="col-12">
-              <label for="email" class="form-label">E-mail</label>
-              <input type="email" id="email" name="email" class="form-control" placeholder="Seu e-mail" required>
-            </div>
-            <div class="col-12">
-              <label for="phone" class="form-label">Número de telefone</label>
-              <input type="tel" id="phone" name="phone" class="form-control" placeholder="Seu telefone">
-            </div>
-            <div class="col-12 text-center">
-              <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="bg-dark text-light py-3">
-    <div class="container text-center">
-      <p class="mb-0">&copy; 2025 HeinSoft Company. All rights reserved. Desenvolved by <a href="#" class="text-decoration-none text-light">HeinSoft</a></p>
+      <p class="mb-0">&copy; 2025 HeinSoft Company. Todos os direitos reservados. Desenvolvido por <a href="#" class="text-light text-decoration-none">HeinSoft</a></p>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoYz1HI5WH4ohLhc+vZL9ZZdo+1vZBam7Dm9F8ABYT/5SIp" crossorigin="anonymous"></script>
-  <script src="main.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/main.js"></script>
 </body>
 </html>
