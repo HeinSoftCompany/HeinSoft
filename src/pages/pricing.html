@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HeinSoft Company | Sites Profissionais, Rápidos e Otimizados</title>
+    <!--Bootstrap link-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="/images/logo/favicon.svg"
+      type="image/svg+xml"
+    />
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Line Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+
+    <style>
+      .bg-gradient-hs {
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+      }
+
+      .bg-gradient-hs::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, #8b5cf6, #ec4899);
+        opacity: 0.9;
+        z-index: -1;
+      }
+    </style>
+  </head>
+
+  <body class="font-pacifico" style="background-color: #212529">
+    <!-- 3) Navbar fixa -->
+    <nav
+      class="navbar navbar-expand-md navbar-dark bg-dark fixed-top shadow-sm"
+      id="navbar-padrao"
+    >
+      <div class="container-fluid px-4">
+        <a class="navbar-brand font-pacifico text-white" href="#">HeinSoft</a>
+        <!-- Toggler visível apenas no mobile -->
+        <button
+          class="navbar-toggler d-md-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mainOffcanvas"
+          aria-controls="mainOffcanvas"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Itens desktop -->
+        <div class="d-none d-md-flex justify-content-center w-100" id="mainNav">
+          <ul class="navbar-nav flex-row mx-auto">
+            <li class="nav-item px-2">
+              <a class="nav-link font-pacifico text-white" href="#home"
+                ><i class="las la-home"></i> Home</a
+              >
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link font-pacifico text-white" href="#services"
+                ><i class="las la-tools"></i> Serviços</a
+              >
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link font-pacifico text-white" href="#portfolio"
+                ><i class="la la-briefcase"></i> Portfólio</a
+              >
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link font-pacifico text-white" href="#about"
+                ><i class="las la-user"></i> Sobre</a
+              >
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link font-pacifico text-white" href="#faq"
+                ><i class="las la-comment"></i> FAQ</a
+              >
+            </li>
+            <li class="nav-item px-2">
+              <a href="#footer" class="btn btn-gradient font-pacifico ms-3">
+                <i class="las la-file-invoice-dollar"></i> Pedir Orçamento
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="offcanvas offcanvas-start custom-offcanvas-style text-white"
+      tabindex="-1"
+      id="mainOffcanvas"
+      aria-labelledby="mainOffcanvasLabel"
+    >
+      <div class="offcanvas-header">
+        <a class="navbar-brand font-pacifico text-white" href="#">HeinSoft</a>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link font-pacifico text-white" href="#home"
+              ><i class="las la-home"></i> Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-pacifico text-white" href="#services"
+              ><i class="las la-tools"></i> Serviços</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-pacifico text-white" href="#portfolio"
+              ><i class="la la-briefcase"></i> Portfólio</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-pacifico text-white" href="#about"
+              ><i class="las la-user"></i> Sobre</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-pacifico text-white" href="#faq"
+              ><i class="las la-comment"></i> FAQ</a
+            >
+          </li>
+        </ul>
+        <a href="#footer" class="btn btn-gradient font-pacifico mt-3 w-100">
+          <i class="las la-file-invoice-dollar"></i> Pedir Orçamento
+        </a>
+      </div>
+    </div>
+    <!-- 4) Hero Content -->
+    <div
+      class="container py-5 bg-dark text-white"
+      style="scroll-margin-top: 100px"
+    >
+      <header>
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+          <h1 class="display-4 fw-normal text-white">Planos de suporte</h1>
+          <p class="fs-5 text-light">
+            Mantenha seu site sempre atualizado, seguro e otimizado com o
+            suporte contínuo da HeinSoft Company
+          </p>
+        </div>
+      </header>
+
+      <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div
+              class="card mb-4 rounded-3 shadow-sm bg-gradient-hs text-white"
+            >
+              <div class="card-header py-3 bg-dark text-white">
+                <h4 class="my-0 fw-normal">Suporte Essential</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title text-white">
+                  R$59<small class="text-light fw-light">/mês</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>1 backup manual</li>
+                  <li>1 atualização mensal</li>
+                  <li>Suporte via e-mail em até 72h</li>
+                  <li>Monitoramento de disponibilidade</li>
+                </ul>
+
+                <!-- Botão Mercado Pago - HeinSoft Style -->
+                <a
+                  href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380849817d4a2019819538b380084"
+                  name="MP-payButton"
+                  target="_blank"
+                  class="w-100 btn btn-lg btn-outline-light fw-semibold"
+                >
+                  Assinar
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Script do Mercado Pago (apenas 1x na página, preferencialmente no final do body) -->
+          <script type="text/javascript">
+            (function () {
+              function $MPC_load() {
+                if (!window.$MPC_loaded) {
+                  var s = document.createElement('script');
+                  s.type = 'text/javascript';
+                  s.async = true;
+                  s.src =
+                    document.location.protocol +
+                    '//secure.mlstatic.com/mptools/render.js';
+                  var x = document.getElementsByTagName('script')[0];
+                  x.parentNode.insertBefore(s, x);
+                  window.$MPC_loaded = true;
+                }
+              }
+              if (!window.$MPC_loaded) {
+                window.addEventListener('load', $MPC_load, false);
+              }
+            })();
+          </script>
+
+          <div class="col">
+            <div
+              class="card mb-4 rounded-3 shadow-sm bg-gradient-hs text-white"
+            >
+              <div class="card-header py-3 bg-dark text-white">
+                <h4 class="my-0 fw-normal">Suporte Pro</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title text-white">
+                  R$119<small class="text-light fw-light">/mês</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>2 backups manuais</li>
+                  <li>2 atualizações mensais</li>
+                  <li>Otimização leve de SEO</li>
+                  <li>Suporte via WhatsApp e e-mail</li>
+                  <li>Relatório de performance bimestral</li>
+                </ul>
+
+                <!-- Botão Mercado Pago estilizado -->
+                <a
+                  href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380849817d4bc0198196466bc0080"
+                  name="MP-payButton"
+                  target="_blank"
+                  class="w-100 btn btn-lg btn-light text-dark fw-semibold"
+                >
+                  Assinar
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Script Mercado Pago (fora do loop de cards, pode estar no final da página) -->
+          <script type="text/javascript">
+            (function () {
+              function $MPC_load() {
+                if (!window.$MPC_loaded) {
+                  var s = document.createElement('script');
+                  s.type = 'text/javascript';
+                  s.async = true;
+                  s.src =
+                    document.location.protocol +
+                    '//secure.mlstatic.com/mptools/render.js';
+                  var x = document.getElementsByTagName('script')[0];
+                  x.parentNode.insertBefore(s, x);
+                  window.$MPC_loaded = true;
+                }
+              }
+              if (!window.$MPC_loaded) {
+                window.addEventListener('load', $MPC_load, false);
+              }
+            })();
+          </script>
+
+          <div class="col">
+            <div
+              class="card mb-4 rounded-3 shadow-sm border-secondary bg-dark text-white opacity-50"
+            >
+              <div
+                class="card-header py-3 bg-secondary text-white border-secondary"
+              >
+                <h4 class="my-0 fw-normal">Suporte Premium</h4>
+                <span class="badge bg-light text-dark ms-2">em breve</span>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title text-white">
+                  R$249<small class="text-light fw-light">/mês</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Backups automáticos</li>
+                  <li>Atualizações semanais</li>
+                  <li>SEO técnico avançado</li>
+                  <li>Relatório estratégico mensal</li>
+                  <li>Suporte prioritário via WhatsApp</li>
+                  <li>Consultoria com especialista HeinSoft</li>
+                </ul>
+                <button
+                  type="button"
+                  class="w-100 btn btn-lg btn-outline-light disabled"
+                  disabled
+                >
+                  Indisponível
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="display-6 text-center mb-4 text-white">Compare os planos</h2>
+
+        <div class="table-responsive">
+          <table class="table table-dark text-center">
+            <thead>
+              <tr>
+                <th style="width: 34%"></th>
+                <th style="width: 22%">Essential</th>
+                <th style="width: 22%">Pro</th>
+                <th style="width: 22%">Premium</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Atualizações</th>
+                <td><i class="la la-check text-purple"></i></td>
+                <td><i class="la la-check text-purple"></i></td>
+                <td><i class="la la-check text-purple"></i></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Backups</th>
+                <td><i class="la la-check text-purple"></i></td>
+                <td><i class="la la-check text-purple"></i></td>
+                <td><i class="la la-check text-purple"></i></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Suporte</th>
+                <td><i class="la la-check text-purple"></i></td>
+                <td><i class="la la-check text-purple"></i></td>
+                <td><i class="la la-check text-purple"></i></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Otimização de SEO</th>
+                <td></td>
+                <td><i class="la la-check text-purple"></i></td>
+                <td><i class="la la-check text-purple"></i></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Relatórios</th>
+                <td></td>
+                <td><i class="la la-check text-purple"></i></td>
+                <td><i class="la la-check text-purple"></i></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Consultoria 1:1</th>
+                <td></td>
+                <td></td>
+                <td><i class="la la-check text-purple"></i></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Insights</th>
+                <td></td>
+                <td></td>
+                <td><i class="la la-check text-purple"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+
+      <footer class="pt-4 my-md-5 pt-md-5 border-top text-light">
+        <div class="row">
+          <div class="col-12 col-md">
+            <img
+              class="mb-2"
+              src="/images/logo/Logo webp.webp"
+              alt=""
+              width="24"
+              height="19"
+            />
+          </div>
+          <small class="d-block mb-3">© 2025</small>
+          <div class="col-6 col-md-2 mb-3">
+            <h5 class="font-pacifico">Nav</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 font-pacifico" id="footer-li"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 font-pacifico" id="footer-li"
+                  >Serviços</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 font-pacifico" id="footer-li"
+                  >Portfólio</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 font-pacifico" id="footer-li"
+                  >Sobre</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 font-pacifico" id="footer-li"
+                  >FAQs</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!--Footer section Pages-->
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Página</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a
+                  href="/pages/about.html"
+                  class="nav-link p-0 font-pacifico"
+                  id="footer-li"
+                  >Sobre</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a
+                  href="/pages/pricing.html"
+                  class="nav-link p-0 font-pacifico"
+                  id="footer-li"
+                  >Preço</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a
+                  href="/pages/brifing.html"
+                  class="nav-link p-0 font-pacifico"
+                  id="footer-li"
+                  >Brifing</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a
+                  href="/pages/develop.html"
+                  class="nav-link p-0 font-pacifico"
+                  id="footer-li"
+                  >Desenvolvimento</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a
+                  href="/pages/design.html"
+                  class="nav-link p-0 font-pacifico"
+                  id="footer-li"
+                  >Design</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!--Footer section SEÇÕES-->
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Seções</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a
+                  href="/sections/terms.html"
+                  class="nav-link p-0 font-pacifico"
+                  id="footer-li"
+                  >Termos</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a
+                  href="/sections/privacy.html"
+                  class="nav-link p-0 font-pacifico"
+                  id="footer-li"
+                  >Privacidade</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a
+                  href="/sections/support.html"
+                  class="nav-link p-0 font-pacifico"
+                  id="footer-li"
+                  >Suporte</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a
+                  href="/sections/work.html"
+                  class="nav-link p-0 font-pacifico"
+                  id="footer-li"
+                  >Carreiras</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a
+                  href="/sections/blog.html"
+                  class="nav-link p-0 font-pacifico"
+                  id="footer-li"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Bootstrap JS (via CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bundle do Vite: importa main.js (que injeta main.scss e roda seu JS) -->
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

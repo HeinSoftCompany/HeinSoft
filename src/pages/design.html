@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Briefing | HeinSoft Company</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Line Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+
+      .text-primarys {
+        background: linear-gradient(90deg, #bc4ed8, #5588ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .card-icon {
+        font-size: 2.5rem;
+        color: #ffffff;
+        background: linear-gradient(135deg, #a64eff, #557bff);
+        border-radius: 16px;
+        padding: 20px;
+        display: inline-block;
+      }
+
+      .shadow-dark {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.6);
+      }
+
+      .btn-gradient {
+        background: linear-gradient(
+          90deg,
+          rgba(139, 92, 246, 0.8),
+          rgba(236, 72, 153, 0.8)
+        );
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1.5rem;
+        border-radius: 9999px;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+        }
+      }
+
+      .btn-hover {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+    </style>
+  </head>
+
+  <body class="bg-dark text-white">
+    <nav
+      class="navbar navbar-expand-md navbar-dark bg-dark fixed-top shadow-sm"
+      id="navbar-padrao"
+    >
+      <div class="container-fluid px-4">
+        <a class="navbar-brand font-pacifico text-white" href="#">HeinSoft</a>
+        <!-- Toggler visível apenas no mobile -->
+        <button
+          class="navbar-toggler d-md-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mainOffcanvas"
+          aria-controls="mainOffcanvas"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Itens desktop -->
+        <div class="d-none d-md-flex justify-content-center w-100" id="mainNav">
+          <ul class="navbar-nav flex-row mx-auto">
+            <li class="nav-item px-2">
+              <a class="nav-link font-pacifico text-white" href="#home"
+                ><i class="las la-home"></i> Home</a
+              >
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link font-pacifico text-white" href="#services"
+                ><i class="las la-tools"></i> Serviços</a
+              >
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link font-pacifico text-white" href="#portfolio"
+                ><i class="la la-briefcase"></i> Portfólio</a
+              >
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link font-pacifico text-white" href="#about"
+                ><i class="las la-user"></i> Sobre</a
+              >
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link font-pacifico text-white" href="#faq"
+                ><i class="las la-comment"></i> FAQ</a
+              >
+            </li>
+            <li class="nav-item px-2">
+              <a href="#footer" class="btn btn-gradient font-pacifico ms-3">
+                <i class="las la-file-invoice-dollar"></i> Pedir Orçamento
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container py-5 mt-5">
+      <!-- Jumbotron -->
+      <div class="p-5 mb-5 bg-secondary bg-opacity-25 rounded-4 shadow-dark">
+        <div class="container-fluid py-4">
+          <h1 class="display-5 fw-bold text-primarys">Design com propósito</h1>
+          <p class="fs-5 text-light">
+            O processo de design da HeinSoft é orientado por estratégia e
+            estética. Desenvolvemos interfaces modernas, acessíveis e que
+            refletem a identidade do seu negócio. Cada detalhe é pensado para
+            transformar visitantes em clientes.
+          </p>
+        </div>
+      </div>
+
+      <!-- Cards -->
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div
+            class="card bg-secondary bg-opacity-10 h-100 border-0 shadow-dark rounded-4 p-4 text-center"
+          >
+            <div class="card-icon mb-3">
+              <i class="las la-lightbulb"></i>
+            </div>
+            <h4 class="fw-bold text-white">Identidade Visual Estratégica</h4>
+            <p class="text-light">
+              Analisamos o público-alvo e criamos um design que transmite os
+              valores da sua marca, reforçando autoridade e confiança desde o
+              primeiro clique.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div
+            class="card bg-secondary bg-opacity-10 h-100 border-0 shadow-dark rounded-4 p-4 text-center"
+          >
+            <div class="card-icon mb-3">
+              <i class="las la-layer-group"></i>
+            </div>
+            <h4 class="fw-bold text-white">Layouts Responsivos & Coesos</h4>
+            <p class="text-light">
+              Criamos interfaces fluidas e intuitivas, adaptadas para todos os
+              dispositivos. Usabilidade e performance caminham lado a lado em
+              cada projeto.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div
+            class="card bg-secondary bg-opacity-10 h-100 border-0 shadow-dark rounded-4 p-4 text-center"
+          >
+            <div class="card-icon mb-3">
+              <i class="las la-palette"></i>
+            </div>
+            <h4 class="fw-bold text-white">Detalhamento Visual Impecável</h4>
+            <p class="text-light">
+              Tipografia, cores, espaçamentos e animações são utilizados de
+              forma precisa para proporcionar uma experiência envolvente e
+              memorável.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center mt-5">
+        <a
+          href="/#orcamento"
+          class="btn btn-outline-light px-4 py-2 font-pacifico"
+        >
+          Veja nossos Designs
+        </a>
+      </div>
+
+      <!-- Footer -->
+      <footer
+        class="pt-5 mt-5 text-secondary border-top border-secondary text-center"
+      >
+        <p class="mb-0">
+          © 2025 Heinsoft Company. Todos os direitos reservados.
+        </p>
+        <a
+          href="/sections/politics.html"
+          class="small text-light text-decoration-underline d-block mt-1"
+        >
+          Termos e Políticas
+        </a>
+      </footer>
+    </div>
+  </body>
+</html>

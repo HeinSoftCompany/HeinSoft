@@ -1,0 +1,27 @@
+.hs-section {
+  position: relative;
+  z-index: 1;
+  padding: 96px 0;
+}
+
+@media (max-width: 991px) {
+  .hs-section { padding: 80px 0; }
+}
+
+.hs-kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  color: rgba(167, 139, 250, 0.9);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.hs-h2 {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.hs-sub {
+  max-width: 720px;
+  color: var(--hs-muted);
+}

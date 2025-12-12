@@ -1,0 +1,124 @@
+.hs-card {
+  background: var(--hs-surface);
+  border: 1px solid var(--hs-border);
+  border-radius: var(--hs-radius);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+}
+
+.hs-cardTitle {
+  font-size: 1.05rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.hs-cardText {
+  color: rgba(255,255,255,0.62);
+  font-size: 0.95rem;
+}
+
+.hs-card--service {
+  padding: 18px;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba(139,92,246,0.35);
+    background: rgba(255,255,255,0.07);
+  }
+}
+
+.hs-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(139,92,246,0.18);
+  border: 1px solid rgba(139,92,246,0.28);
+
+  i { font-size: 22px; color: rgba(255,255,255,0.92); }
+}
+
+.hs-list {
+  margin: 0;
+  padding-left: 16px;
+  color: rgba(255,255,255,0.72);
+  font-size: 0.95rem;
+}
+
+.hs-card--project {
+  overflow: hidden;
+  transition: transform .18s ease, border-color .18s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba(139,92,246,0.35);
+  }
+}
+
+.hs-thumb {
+  height: 170px;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.hs-badge {
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.86);
+}
+
+.hs-badge--green {
+  background: rgba(34,197,94,0.14);
+  border-color: rgba(34,197,94,0.24);
+}
+
+.hs-badge--purple {
+  background: rgba(139,92,246,0.16);
+  border-color: rgba(139,92,246,0.28);
+}
+
+.hs-miniCard {
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.10);
+
+  &__title { font-weight: 900; }
+  &__text { color: rgba(255,255,255,0.62); font-size: 0.92rem; }
+}
+
+.hs-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.10);
+}
+
+.hs-checklist { display: grid; gap: 12px; }
+
+.hs-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.78);
+
+  i { color: rgba(34,197,94,0.9); font-size: 18px; }
+}
+
+.hs-stars i { color: rgba(255, 214, 102, 0.95); }
+
+.hs-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(139,92,246,0.18);
+  border: 1px solid rgba(139,92,246,0.28);
+  font-weight: 950;
+}

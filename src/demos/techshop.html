@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TechShop Fictícia — HeinSoft</title>
+
+    <!-- Fonte + Bootstrap + Ícones -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --hs-primary: #6c63ff;
+        --hs-dark: #0f172a;
+        --hs-muted: #64748b;
+        --hs-soft: #eef2ff;
+      }
+      body {
+        padding-top: 60px;
+        font-family:
+          'Plus Jakarta Sans',
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+        background: #f8fafc;
+      }
+      .navbar {
+        box-shadow: 0 4px 18px rgba(2, 6, 23, 0.06);
+      }
+      .navbar .form-control {
+        border-radius: 9999px;
+      }
+      .brand-dot {
+        width: 0.6rem;
+        height: 0.6rem;
+        background: var(--hs-primary);
+        display: inline-block;
+        border-radius: 50%;
+      }
+
+      /* Lateral categorias */
+      .category-menu a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.25rem;
+        border-radius: 0.5rem;
+        color: #0f172a;
+        text-decoration: none;
+      }
+      .category-menu a:hover {
+        background: #f1f5f9;
+        color: #111827;
+      }
+
+      /* Hero */
+      .hero {
+        background: linear-gradient(
+          105deg,
+          #e8edff 0%,
+          #f2f8ff 60%,
+          #ffffff 100%
+        );
+        border-radius: 1rem;
+        padding: 2rem 2rem;
+        overflow: hidden;
+        position: relative;
+      }
+      .hero::after {
+        content: '';
+        position: absolute;
+        inset: auto -15% -30% auto;
+        width: 55%;
+        height: 140%;
+        background: radial-gradient(
+          60% 60% at 50% 50%,
+          rgba(108, 99, 255, 0.2),
+          rgba(108, 99, 255, 0)
+        );
+        transform: rotate(-8deg);
+      }
+
+      #cards {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      #cards:hover {
+        transform: translateY(-5px) scale(1.03);
+      }
+
+      /* Card produto */
+      .product-card {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.85rem;
+        overflow: hidden;
+        transition:
+          box-shadow 0.25s,
+          transform 0.25s;
+      }
+      .product-card:hover {
+        box-shadow: 0 10px 28px rgba(2, 6, 23, 0.08);
+        transform: translateY(-2px);
+      }
+      .product-thumb {
+        aspect-ratio: 4/3;
+        object-fit: cover;
+      }
+      .price {
+        font-weight: 700;
+      }
+      .old-price {
+        color: #94a3b8;
+        text-decoration: line-through;
+        margin-left: 0.4rem;
+      }
+      .rating {
+        color: #f59e0b;
+        font-size: 0.9rem;
+      }
+      .badge-new {
+        background: #22c55e;
+      }
+      .badge-sale {
+        background: #ef4444;
+      }
+      .badge-hot {
+        background: #f97316;
+      }
+
+      /* Banner de faixa */
+      .strip {
+        background: linear-gradient(90deg, #e1e7ff, #e6f0ff);
+        border: 1px solid #e5e7eb;
+        border-radius: 1rem;
+        padding: 1.25rem 1.5rem;
+      }
+
+      /* Footer */
+      footer {
+        background: #0b1220;
+        color: #94a3b8;
+      }
+      footer a {
+        text-decoration: none;
+        color: #94a3b8;
+      }
+      footer a:hover {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="#">
+          <span class="brand-dot me-2"></span>TechShop<span class="text-primary"
+            >.HS</span
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#topNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="topNav">
+          <form
+            class="ms-auto me-3 d-none d-md-flex"
+            role="search"
+            style="min-width: 360px"
+          >
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Busque produtos, marcas, categorias..."
+              aria-label="Buscar"
+            />
+          </form>
+          <ul class="navbar-nav align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Ofertas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Suporte</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTEÚDO -->
+    <div class="container py-4">
+      <div class="row g-4">
+        <!-- MENU LATERAL -->
+        <aside class="col-lg-3">
+          <div class="bg-white p-3 rounded-4 shadow-sm">
+            <h6 class="fw-semibold mb-3">Categorias</h6>
+            <nav class="category-menu">
+              <a href="#"
+                ><i class="ri-mac-line"></i>Computadores & Notebooks</a
+              >
+              <a href="#"
+                ><i class="ri-smartphone-line"></i>Smartphones & Tablets</a
+              >
+              <a href="#"><i class="ri-headphone-line"></i>Áudio & Headsets</a>
+              <a href="#"><i class="ri-tv-2-line"></i>Monitores & TV</a>
+              <a href="#"><i class="ri-camera-lens-line"></i>Câmeras & Foto</a>
+              <a href="#"
+                ><i class="ri-cpu-line"></i>Componentes & Acessórios</a
+              >
+              <a href="#"><i class="ri-gamepad-line"></i>Games</a>
+              <a href="#"><i class="ri-home-8-line"></i>Casa Inteligente</a>
+              <a href="#"><i class="ri-printer-line"></i>Escritório</a>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- HERO -->
+        <section class="col-lg-9">
+          <div
+            class="hero d-flex flex-column flex-md-row align-items-center justify-content-between gap-3"
+          >
+            <div class="position-relative" style="z-index: 2">
+              <span class="badge text-bg-light border">Destaque da semana</span>
+              <h2 class="fw-bold mt-2">MacBook Pro - 16pol</h2>
+              <p class="text-secondary mb-3">
+                Performance absurda para design, dev e produtividade. Frete
+                grátis e 12x sem juros.
+              </p>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-primary">Comprar agora</a>
+                <a href="#" class="btn btn-outline-secondary"
+                  >Ver especificações</a
+                >
+              </div>
+            </div>
+            <img
+              class="img-fluid"
+              style="
+                max-width: 50%;
+                border-radius: 0.75rem;
+                object-fit: contain;
+              "
+              src="/images/products portfolio/macbook air m4.png"
+              alt="Laptop destaque"
+            />
+          </div>
+        </section>
+      </div>
+
+      <!-- FEATURES -->
+      <section class="row text-center g-3 my-4">
+        <div class="col-md-3" id="cards">
+          <div class="bg-white rounded-4 p-3 shadow-sm h-100">
+            <i class="ri-truck-line fs-3 text-primary"></i>
+            <p class="mb-0 mt-2">Frete grátis & devolução</p>
+          </div>
+        </div>
+        <div class="col-md-3" id="cards">
+          <div class="bg-white rounded-4 p-3 shadow-sm h-100">
+            <i class="ri-secure-payment-line fs-3 text-primary"></i>
+            <p class="mb-0 mt-2">Pagamento seguro</p>
+          </div>
+        </div>
+        <div class="col-md-3" id="cards">
+          <div class="bg-white rounded-4 p-3 shadow-sm h-100">
+            <i class="ri-shield-check-line fs-3 text-primary"></i>
+            <p class="mb-0 mt-2">Garantia de 30 dias</p>
+          </div>
+        </div>
+        <div class="col-md-3" id="cards">
+          <div class="bg-white rounded-4 p-3 shadow-sm h-100">
+            <i class="ri-customer-service-2-line fs-3 text-primary"></i>
+            <p class="mb-0 mt-2">Suporte 24/7</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- NOVAS CHEGADAS -->
+      <section class="my-4">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <h4 class="fw-bold mb-0">Novas chegadas</h4>
+          <a href="#" class="link-primary">Ver tudo →</a>
+        </div>
+        <div class="row g-3">
+          <!-- 8 produtos -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card h-100">
+              <img
+                class="product-thumb w-100"
+                src="/images/products portfolio/macbook pro m4 16.png"
+                style="object-fit: contain"
+                alt="Laptop"
+              />
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h6 class="mb-1">Ultrabook Air 14"</h6>
+                  <span class="badge badge-new">Novo</span>
+                </div>
+                <div class="rating">
+                  ★★★★★ <span class="text-muted">(128)</span>
+                </div>
+                <div class="mt-1">
+                  <span class="price">R$ 4.299</span>
+                  <span class="old-price">R$ 4.999</span>
+                </div>
+                <button class="btn btn-sm btn-primary w-100 mt-2">
+                  <i class="ri-shopping-cart-2-line me-1"></i>Adicionar
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card h-100">
+              <img
+                class="product-thumb w-100"
+                src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop"
+                alt="Smartphone"
+              />
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h6 class="mb-1">Smartphone Neo 128GB</h6>
+                  <span class="badge badge-sale">-15%</span>
+                </div>
+                <div class="rating">
+                  ★★★★☆ <span class="text-muted">(342)</span>
+                </div>
+                <div class="mt-1">
+                  <span class="price">R$ 1.899</span>
+                  <span class="old-price">R$ 2.249</span>
+                </div>
+                <button class="btn btn-sm btn-primary w-100 mt-2">
+                  Adicionar
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card h-100">
+              <img
+                class="product-thumb w-100"
+                src="https://images.unsplash.com/photo-1517816428104-797678c7cf0d?q=80&w=1200&auto=format&fit=crop"
+                alt="Headphones"
+              />
+              <div class="p-3">
+                <h6 class="mb-1">Headset Studio Wireless</h6>
+                <div class="rating">
+                  ★★★★★ <span class="text-muted">(2.1k)</span>
+                </div>
+                <div class="mt-1"><span class="price">R$ 749</span></div>
+                <button class="btn btn-sm btn-primary w-100 mt-2">
+                  Adicionar
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card h-100">
+              <img
+                class="product-thumb w-100"
+                src="https://images.unsplash.com/photo-1526178610432-6c6ce4b6a04b?q=80&w=1200&auto=format&fit=crop"
+                alt="Camera"
+              />
+              <div class="p-3">
+                <h6 class="mb-1">Câmera Mirrorless X10</h6>
+                <div class="rating">
+                  ★★★★☆ <span class="text-muted">(89)</span>
+                </div>
+                <div class="mt-1">
+                  <span class="price">R$ 3.590</span>
+                  <span class="old-price">R$ 3.990</span>
+                </div>
+                <button class="btn btn-sm btn-primary w-100 mt-2">
+                  Adicionar
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card h-100">
+              <img
+                class="product-thumb w-100"
+                src="https://images.unsplash.com/photo-1512446816042-444d641267ee?q=80&w=1200&auto=format&fit=crop"
+                alt="Tablet"
+              />
+              <div class="p-3">
+                <h6 class="mb-1">Tablet Vision 11"</h6>
+                <div class="rating">
+                  ★★★★☆ <span class="text-muted">(57)</span>
+                </div>
+                <div class="mt-1"><span class="price">R$ 2.299</span></div>
+                <button class="btn btn-sm btn-primary w-100 mt-2">
+                  Adicionar
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card h-100">
+              <img
+                class="product-thumb w-100"
+                src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=1200&auto=format&fit=crop"
+                alt="Smartwatch"
+              />
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h6 class="mb-1">Smartwatch Pulse 7</h6>
+                  <span class="badge badge-hot">Hot</span>
+                </div>
+                <div class="rating">
+                  ★★★★☆ <span class="text-muted">(640)</span>
+                </div>
+                <div class="mt-1"><span class="price">R$ 899</span></div>
+                <button class="btn btn-sm btn-primary w-100 mt-2">
+                  Adicionar
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card h-100">
+              <img
+                class="product-thumb w-100"
+                src="https://images.unsplash.com/photo-1519638399535-1b036603ac77?q=80&w=1200&auto=format&fit=crop"
+                alt="Speaker"
+              />
+              <div class="p-3">
+                <h6 class="mb-1">Caixa de Som Pocket</h6>
+                <div class="rating">
+                  ★★★★★ <span class="text-muted">(318)</span>
+                </div>
+                <div class="mt-1">
+                  <span class="price">R$ 229</span>
+                  <span class="old-price">R$ 289</span>
+                </div>
+                <button class="btn btn-sm btn-primary w-100 mt-2">
+                  Adicionar
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card h-100">
+              <img
+                class="product-thumb w-100"
+                src="https://images.unsplash.com/photo-1585386959984-a41552231684?q=80&w=1200&auto=format&fit=crop"
+                alt="VR"
+              />
+              <div class="p-3">
+                <h6 class="mb-1">Óculos VR One</h6>
+                <div class="rating">
+                  ★★★★☆ <span class="text-muted">(74)</span>
+                </div>
+                <div class="mt-1"><span class="price">R$ 1.199</span></div>
+                <button class="btn btn-sm btn-primary w-100 mt-2">
+                  Adicionar
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- BANNER LARGO -->
+      <section
+        class="strip my-4 d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3"
+      >
+        <div class="text-center text-lg-start">
+          <h5 class="mb-1">Semana de ofertas — 20% OFF</h5>
+          <p class="mb-0 text-secondary">
+            Use o cupom <span class="fw-semibold">WEEK20</span> no checkout
+          </p>
+        </div>
+        <a href="#" class="btn btn-outline-primary">Aproveitar agora</a>
+      </section>
+
+      <!-- PRODUTOS EM DESTAQUE -->
+      <section class="my-4">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <h4 class="fw-bold mb-0">Destaques</h4>
+          <a href="#" class="link-primary">Ver tudo →</a>
+        </div>
+        <div class="row g-3">
+          <!-- 8 produtos -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card h-100">
+              <img
+                class="product-thumb w-100"
+                src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop"
+                alt="Laptop"
+              />
+              <div class="p-3">
+                <h6 class="mb-1">Laptop Creator 16"</h6>
+                <div class="rating">
+                  ★★★★★ <span class="text-muted">(512)</span>
+                </div>
+                <div class="mt-1"><span class="price">R$ 7.899</span></div>
+                <button class="btn btn-sm btn-primary w-100 mt-2">
+                  Adicionar
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card h-100">
+              <img
+                class="product-thumb w-100"
+                src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?q=80&w=1200&auto=format&fit=crop"
+                alt="Fone TWS"
+              />
+              <div class="p-3">
+                <h6 class="mb-1">Fones TWS Pro+</h6>
+                <div class="rating">
+                  ★★★★☆ <span class="text-muted">(1.1k)</span>
+                </div>
+                <div class="mt-1">
+                  <span class="price">R$ 499</span>
+                  <span class="old-price">R$ 569</span>
+                </div>
+                <button class="btn btn-sm btn-primary w-100 mt-2">
+                  Adicionar
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card h-100">
+              <img
+                class="product-thumb w-100"
+                src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1200&auto=format&fit=crop"
+                alt="Teclado"
+              />
+              <div class="p-3">
+                <h6 class="mb-1">Teclado Mecânico RGB</h6>
+                <div class="rating">
+                  ★★★★★ <span class="text-muted">(300)</span>
+                </div>
+                <div class="mt-1"><span class="price">R$ 389</span></div>
+                <button class="btn btn-sm btn-primary w-100 mt-2">
+                  Adicionar
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card h-100">
+              <img
+                class="product-thumb w-100"
+                src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?q=80&w=1200&auto=format&fit=crop"
+                alt="Mouse"
+              />
+              <div class="p-3">
+                <h6 class="mb-1">Mouse Gamer 8K</h6>
+                <div class="rating">
+                  ★★★★☆ <span class="text-muted">(210)</span>
+                </div>
+                <div class="mt-1"><span class="price">R$ 219</span></div>
+                <button class="btn btn-sm btn-primary w-100 mt-2">
+                  Adicionar
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card h-100">
+              <img
+                class="product-thumb w-100"
+                src="https://images.unsplash.com/photo-1527443224154-c4f2a9d09439?q=80&w=1200&auto=format&fit=crop"
+                alt="Drone"
+              />
+              <div class="p-3">
+                <h6 class="mb-1">Drone Vision Air</h6>
+                <div class="rating">
+                  ★★★★☆ <span class="text-muted">(66)</span>
+                </div>
+                <div class="mt-1"><span class="price">R$ 2.990</span></div>
+                <button class="btn btn-sm btn-primary w-100 mt-2">
+                  Adicionar
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card h-100">
+              <img
+                class="product-thumb w-100"
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop"
+                alt="Headphone"
+              />
+              <div class="p-3">
+                <h6 class="mb-1">Headphone Studio 2</h6>
+                <div class="rating">
+                  ★★★★★ <span class="text-muted">(980)</span>
+                </div>
+                <div class="mt-1"><span class="price">R$ 1.090</span></div>
+                <button class="btn btn-sm btn-primary w-100 mt-2">
+                  Adicionar
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card h-100">
+              <img
+                class="product-thumb w-100"
+                src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1200&auto=format&fit=crop"
+                alt="Monitor"
+              />
+              <div class="p-3">
+                <h6 class="mb-1">Monitor 27" 144Hz</h6>
+                <div class="rating">
+                  ★★★★☆ <span class="text-muted">(403)</span>
+                </div>
+                <div class="mt-1"><span class="price">R$ 1.699</span></div>
+                <button class="btn btn-sm btn-primary w-100 mt-2">
+                  Adicionar
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card h-100">
+              <img
+                class="product-thumb w-100"
+                src="https://images.unsplash.com/photo-1498049860654-af1a5c566876?q=80&w=1200&auto=format&fit=crop"
+                alt="SSD"
+              />
+              <div class="p-3">
+                <h6 class="mb-1">SSD NVMe 2TB Gen4</h6>
+                <div class="rating">
+                  ★★★★★ <span class="text-muted">(1.8k)</span>
+                </div>
+                <div class="mt-1">
+                  <span class="price">R$ 899</span>
+                  <span class="old-price">R$ 1.099</span>
+                </div>
+                <button class="btn btn-sm btn-primary w-100 mt-2">
+                  Adicionar
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER -->
+      <section class="bg-white rounded-4 p-4 my-4 shadow-sm">
+        <div class="row align-items-center g-3">
+          <div class="col-lg-6">
+            <h5 class="fw-bold mb-1">Assine a newsletter</h5>
+            <p class="text-secondary mb-0">
+              Receba novidades, reviews e ofertas exclusivas.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <form class="d-flex gap-2">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Seu e-mail"
+              />
+              <button class="btn btn-primary">Inscrever</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- /container -->
+
+    <!-- FOOTER -->
+    <footer class="pt-5">
+      <div class="container pb-4">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <h6 class="text-white">TechShop.HS</h6>
+            <p>
+              Seu hub de tecnologia com curadoria da HeinSoft. Conteúdo e
+              catálogo fictícios para demonstração.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="#"><i class="ri-instagram-line"></i></a>
+              <a href="#"><i class="ri-youtube-line"></i></a>
+              <a href="#"><i class="ri-whatsapp-line"></i></a>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <h6 class="text-white">Empresa</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">Sobre</a></li>
+              <li><a href="#">Carreiras</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="text-white">Ajuda</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">Pedidos & Entregas</a></li>
+              <li><a href="#">Trocas & Devoluções</a></li>
+              <li><a href="#">Garantias</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="text-white">Legal</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">Termos de uso</a></li>
+              <li><a href="#">Política de privacidade</a></li>
+              <li><a href="#">Cookies</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="border-secondary my-4" />
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between small"
+        >
+          <span>© 2025 HeinSoft — Template fictício para demonstração.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

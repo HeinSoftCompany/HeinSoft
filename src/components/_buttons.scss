@@ -1,0 +1,43 @@
+.btn-gradient {
+  border: 0;
+  color: #fff;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--hs-purple), var(--hs-purple2));
+  box-shadow: 0 16px 32px rgba(139, 92, 246, 0.20);
+
+  &:hover { filter: brightness(1.05); color: #fff; }
+}
+
+.btn-ghost {
+  border: 1px solid rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.86);
+  background: rgba(255,255,255,0.03);
+
+  &:hover { background: rgba(255,255,255,0.06); color: #fff; }
+}
+
+.hs-tabs {
+  display: inline-flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.hs-tab {
+  border: 1px solid transparent;
+  background: transparent;
+  color: rgba(255,255,255,0.74);
+  font-weight: 800;
+  padding: 8px 14px;
+  border-radius: 999px;
+
+  &:hover { color: #fff; }
+
+  &.is-active {
+    color: #fff;
+    background: rgba(139,92,246,0.18);
+    border-color: rgba(139,92,246,0.30);
+  }
+}
