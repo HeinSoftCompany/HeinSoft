@@ -1,4 +1,6 @@
-.hs-header { z-index: 1050; }
+.hs-header {
+  z-index: 1050;
+}
 
 .hs-navbar {
   margin-top: 14px;
@@ -9,7 +11,7 @@
 .frosted {
   background: rgba(10, 10, 14, 0.55);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hs-brand {
@@ -21,20 +23,24 @@
 
 .hs-nav {
   .nav-link {
-    color: rgba(255,255,255,0.78);
+    color: rgba(255, 255, 255, 0.78);
     font-weight: 600;
     letter-spacing: 0.2px;
 
-    &:hover { color: #fff; }
-    &.is-active { color: #fff; }
+    &:hover {
+      color: #fff;
+    }
+    &.is-active {
+      color: #fff;
+    }
   }
 
   .navbar-toggler {
-    border: 1px solid rgba(255,255,255,0.12);
+    border: 1px solid rgba(255, 255, 255, 0.12);
   }
 }
 
 .hs-offcanvas {
   background: rgba(7, 8, 12, 0.95);
-  border-right: 1px solid rgba(255,255,255,0.10);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }

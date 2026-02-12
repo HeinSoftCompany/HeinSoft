@@ -1,7 +1,7 @@
 .hs-footerBottom {
   margin-top: 22px;
   padding: 16px 0;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .hs-footTitle {
@@ -17,10 +17,12 @@
   gap: 8px;
 
   a {
-    color: rgba(255,255,255,0.65);
+    color: rgba(255, 255, 255, 0.65);
     text-decoration: none;
 
-    &:hover { color: #fff; }
+    &:hover {
+      color: #fff;
+    }
   }
 }
 
@@ -31,10 +33,15 @@
   display: grid;
   place-items: center;
   text-decoration: none;
-  color: rgba(255,255,255,0.86);
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.10);
+  color: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 
-  i { font-size: 20px; }
-  &:hover { color: #fff; border-color: rgba(139,92,246,0.35); }
+  i {
+    font-size: 20px;
+  }
+  &:hover {
+    color: #fff;
+    border-color: rgba(139, 92, 246, 0.35);
+  }
 }

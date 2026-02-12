@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "cross-env CHOKIDAR_USEPOLLING=1 vite --config vite.config.js",
-  "build": "vite build --config vite.config.js",
-  "preview": "vite preview --port 4173",
-  "format": "prettier --write ."
+    "build": "vite build --config vite.config.js",
+    "preview": "vite preview --port 4173",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "bootstrap": "^5.3.7",
