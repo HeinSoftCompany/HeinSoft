@@ -49,12 +49,6 @@
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-
     <link
       rel="shortcut icon"
       href="/images/logo/favicon.svg"
@@ -76,942 +70,508 @@
     />
   </head>
 
-  <body class="hs-body text-white">
-    <!--WHATSAPP FLUTUANTE-->
-    <a
-      class="whtsp"
-      href="https://wa.me/5581993193905?text=Olá!%20Gostaria%20de%20um%20orçamento%20personalizado"
-      target="_blank"
-    >
-      <i class="lab la-whatsapp"></i>
-    </a>
-    <!-- Background glows -->
-    <div class="hs-bg" aria-hidden="true">
-      <div class="hs-glow hs-glow--a"></div>
-      <div class="hs-glow hs-glow--b"></div>
-      <div class="hs-glow hs-glow--c"></div>
-      <div class="hs-vignette"></div>
-    </div>
+  <body>
+    <!-- Top Nav -->
+    <header class="topbar" id="top">
+      <div class="scroll-progress" aria-hidden="true">
+        <div class="scroll-progress__bar" id="progressBar"></div>
+      </div>
 
-    <!-- HEADER -->
-    <header class="hs-header fixed-top">
       <div class="container">
-        <nav class="navbar navbar-expand-lg hs-navbar frosted">
-          <div class="container-fluid px-2">
-            <a class="navbar-brand hs-brand" href="#home">HeinSoft</a>
+        <div class="topbar__inner d-flex align-items-center justify-content-between">
+          <a class="brand" href="#hero_p" aria-label="Home">
+            <span class="brand__dot"></span>
+            <span class="brand__name">HeinSoft Company</span>
+          </a>
 
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#mainOffcanvas"
-              aria-controls="mainOffcanvas"
-              aria-label="Abrir menu"
-            >
-              <span class="navbar-toggler-icon"></span>
+          <nav class="nav nav--desktop" aria-label="Primary">
+            <a class="nav__link" href="#about">Quem Somos</a>
+            <a class="nav__link" href="#services">Serviços</a>
+            <a class="nav__link" href="#projects">Projetos</a>
+            <a class="nav__link" href="#testimonials">Avalie-nos</a>
+            <a class="nav__link" href="#story">História</a>
+          </nav>
+
+          <div class="topbar__actions d-flex align-items-center">
+            <a class="btn btn--ghost topbar__cta topbar__cta--ghost" href="#contact">Contate-nos</a>
+
+            <button class="btn btn--primary topbar__cta" data-open-modal="quote" type="button">
+              Whatsapp
             </button>
 
-            <div class="collapse navbar-collapse">
-              <ul class="navbar-nav mx-auto gap-lg-2 hs-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="#home">Início</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#services">Serviços</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#portfolio">Projetos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#about">Sobre</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#reviews">Avaliações</a>
-                </li>
-              </ul>
-
-              <a class="btn btn-gradient btn-sm px-3" href="#contact">
-                <i class="las la-file-invoice-dollar me-1"></i>
-                Orçamento
-              </a>
-            </div>
+            <button
+              class="burger burger--responsive"
+              aria-label="Abrir menu"
+              aria-expanded="false"
+              aria-controls="mobileMenu"
+              type="button"
+            >
+              <span></span><span></span><span></span>
+            </button>
           </div>
-        </nav>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="mobile" id="mobileMenu" hidden>
+        <div class="container mobile__inner">
+          <a class="mobile__link" href="#about">Quem Somos</a>
+          <a class="mobile__link" href="#services">Serviços</a>
+          <a class="mobile__link" href="#projects">Projetos</a>
+          <a class="mobile__link" href="#testimonials">Avalie-nos</a>
+          <a class="mobile__link" href="#story">História</a>
+          <a class="mobile__link" href="#contact">Contate-nos</a>
+          <button class="btn btn--primary mobile__btn" data-open-modal="quote" type="button">
+            Whatsapp
+          </button>
+        </div>
       </div>
     </header>
 
-    <!-- OFFCANVAS -->
-    <div
-      class="offcanvas offcanvas-start hs-offcanvas text-white"
-      tabindex="-1"
-      id="mainOffcanvas"
-      aria-labelledby="mainOffcanvasLabel"
-    >
-      <div class="offcanvas-header">
-        <a class="navbar-brand hs-brand" href="#home">HeinSoft</a>
-        <button
-          type="button"
-          class="btn-close btn-close-white"
-          data-bs-dismiss="offcanvas"
-          aria-label="Fechar"
-        ></button>
-      </div>
+    <!-- Hero -->
+    <section class="hero" id="hero_p">
+      <div class="hero__bg"></div>
 
-      <div class="offcanvas-body">
-        <ul class="navbar-nav hs-nav">
-          <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Serviços</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#portfolio">Projetos</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="#reviews">Avaliações</a>
-          </li>
-        </ul>
-
-        <a class="btn btn-gradient w-100 mt-3" href="#contact">
-          <i class="las la-file-invoice-dollar me-1"></i>
-          Solicitar orçamento
-        </a>
-      </div>
-    </div>
-
-    <!-- HERO -->
-    <main>
-      <section id="home" class="hs-section hs-hero">
-        <div class="container">
-          <div class="row justify-content-center text-center">
-            <div class="col-lg-10">
-              <div class="hs-pill mx-auto mb-3">
-                <i class="las la-sparkles"></i>
-                Transformando ideias em soluções reais
-              </div>
-
-              <h1 class="hs-title mb-3">HeinSoft</h1>
-              <p class="hs-lead mx-auto mb-4">
-                Desenvolvimento de sites e sistemas com performance, SEO técnico
-                e segurança — do jeito certo.
+      <div class="container position-relative">
+        <div class="hero__inner row g-4 align-items-start">
+          <div class="col-12 col-lg-7">
+            <div class="hero__content reveal">
+              <p class="kicker">Estúdio de criação digital</p>
+              <h1 class="hero__title">Coloque seu negócio no Google!</h1>
+              <p class="hero__subtitle">
+                Criamos experiências modernas e focadas na conversão com um
+                <br />
+                sistema de design simples e uma estratégia sólida.
               </p>
 
-              <div
-                class="d-flex flex-column flex-sm-row justify-content-center gap-2 gap-sm-3 mb-4"
-              >
-                <a class="btn btn-gradient px-4" href="#contact">
-                  Solicitar Orçamento
-                </a>
-                <a class="btn btn-ghost px-4" href="#portfolio">
-                  Ver Portfólio <i class="las la-arrow-right ms-1"></i>
-                </a>
+              <div class="hero__cta d-flex flex-wrap gap-2">
+                <a class="btn btn--primary" href="#projects">Nossos Trabalhos</a>
+                <a class="btn btn--ghost" href="#services">Nossos Serviços</a>
               </div>
 
-              <div class="row g-3 justify-content-center hs-metrics">
-                <div class="col-6 col-md-3">
-                  <div class="hs-metric">
-                    <div class="hs-metric__num">100%</div>
-                    <div class="hs-metric__label">Foco em resultado</div>
-                  </div>
+              <div class="hero__trust d-flex align-items-center gap-3">
+                <div class="trust__avatars" aria-label="Client avatars">
+                  <img src="/assets/avatar-1.jpg" alt="" />
+                  <img src="/assets/avatar-2.jpg" alt="" />
+                  <img src="/assets/avatar-3.jpg" alt="" />
+                  <img src="/assets/avatar-4.jpg" alt="" />
                 </div>
-                <div class="col-6 col-md-3">
-                  <div class="hs-metric">
-                    <div class="hs-metric__num">3+</div>
-                    <div class="hs-metric__label">Anos de evolução</div>
-                  </div>
-                </div>
-                <div class="col-6 col-md-3">
-                  <div class="hs-metric">
-                    <div class="hs-metric__num">24h</div>
-                    <div class="hs-metric__label">Suporte & agilidade</div>
+
+                <div class="trust__meta">
+                  <div class="stars" aria-label="Rating 5 out of 5">★★★★★</div>
+                  <div class="trust__text">
+                    <strong>12,000+</strong> happy clients
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
 
-              <div class="hs-scrollhint mt-4">
-                <i class="las la-angle-down"></i>
+          <div class="col-12 col-lg-5">
+            <div class="hero__card reveal">
+              <button class="play" aria-label="Play intro video" type="button"></button>
+
+              <div class="hero__person">
+                <img src="/assets/avatar-1.jpg" alt="Founder portrait" />
+                <div>
+                  <p class="hero__name">Fundador e Diretor da HeinSoft</p>
+                  <p class="hero__role">Web Designer</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- SERVICES -->
-      <section id="services" class="hs-section">
-        <div class="container">
-          <div class="text-center mb-5">
-            <div class="hs-kicker">SERVIÇOS</div>
-            <h2 class="hs-h2 mb-2">
-              Soluções completas para seu negócio digital
-            </h2>
-            <p class="hs-sub mx-auto">
-              Da ideia ao deploy: entregamos um projeto pronto para converter,
-              ranquear e escalar.
-            </p>
-          </div>
-
-          <div class="row g-3 g-lg-4">
-            <!-- 1 -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <article class="hs-card hs-card--service h-100">
-                <div class="d-flex align-items-start gap-3">
-                  <div class="hs-icon"><i class="las la-code"></i></div>
-                  <div class="flex-grow-1">
-                    <h3 class="hs-cardTitle">Site Personalizado</h3>
-                    <br />
-                    <p class="hs-cardText">
-                      Interface moderna, responsiva e preparada para conversão.
-                    </p>
-                    <ul class="hs-list">
-                      <li>Design profissional</li>
-                      <li>Responsivo</li>
-                      <li>Componentes reutilizáveis</li>
-                    </ul>
-                    <a class="btn btn-ghost btn-sm mt-3" href="#contact"
-                      >Quero isso</a
-                    >
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <!-- 2 -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <article class="hs-card hs-card--service h-100">
-                <div class="d-flex align-items-start gap-3">
-                  <div class="hs-icon"><i class="las la-shopping-bag"></i></div>
-                  <div class="flex-grow-1">
-                    <h3 class="hs-cardTitle">Loja Virtual</h3>
-                    <br />
-                    <p class="hs-cardText">
-                      Estrutura de e-commerce com foco em vendas e performance.
-                    </p>
-                    <ul class="hs-list">
-                      <li>Vitrine otimizada</li>
-                      <li>Catálogo organizado</li>
-                      <li>CTA + conversão</li>
-                    </ul>
-                    <a class="btn btn-ghost btn-sm mt-3" href="#contact"
-                      >Quero isso</a
-                    >
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <!-- 3 -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <article class="hs-card hs-card--service h-100">
-                <div class="d-flex align-items-start gap-3">
-                  <div class="hs-icon"><i class="las la-pen-nib"></i></div>
-                  <div class="flex-grow-1">
-                    <h3 class="hs-cardTitle">Design UI/UX</h3>
-                    <br />
-                    <p class="hs-cardText">
-                      Experiência clara, estética premium e fluxo que faz
-                      vender.
-                    </p>
-                    <ul class="hs-list">
-                      <li>Wireframe & layout</li>
-                      <li>Hierarquia visual</li>
-                      <li>Identidade consistente</li>
-                    </ul>
-                    <a class="btn btn-ghost btn-sm mt-3" href="#contact"
-                      >Quero isso</a
-                    >
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <!-- 4 -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <article class="hs-card hs-card--service h-100">
-                <div class="d-flex align-items-start gap-3">
-                  <div class="hs-icon">
-                    <i class="las la-tachometer-alt"></i>
-                  </div>
-                  <div class="flex-grow-1">
-                    <h3 class="hs-cardTitle">Performance & SEO</h3>
-                    <br />
-                    <p class="hs-cardText">
-                      Otimização técnica para velocidade, rankeamento e
-                      estabilidade.
-                    </p>
-                    <ul class="hs-list">
-                      <li>SEO técnico</li>
-                      <li>Core Web Vitals</li>
-                      <li>Boas práticas</li>
-                    </ul>
-                    <a class="btn btn-ghost btn-sm mt-3" href="#contact"
-                      >Quero isso</a
-                    >
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <!-- 5 -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <article class="hs-card hs-card--service h-100">
-                <div class="d-flex align-items-start gap-3">
-                  <div class="hs-icon"><i class="las la-shield-alt"></i></div>
-                  <div class="flex-grow-1">
-                    <h3 class="hs-cardTitle">Segurança</h3>
-                    <br />
-                    <p class="hs-cardText">
-                      Boas práticas, proteção e deploy seguro com SSL.
-                    </p>
-                    <ul class="hs-list">
-                      <li>HTTPS/SSL</li>
-                      <li>Hardening básico</li>
-                      <li>Deploy estável</li>
-                    </ul>
-                    <a class="btn btn-ghost btn-sm mt-3" href="#contact"
-                      >Quero isso</a
-                    >
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <!-- 6 -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <article class="hs-card hs-card--service h-100">
-                <div class="d-flex align-items-start gap-3">
-                  <div class="hs-icon"><i class="las la-headset"></i></div>
-                  <div class="flex-grow-1">
-                    <h3 class="hs-cardTitle">Suporte Contínuo</h3>
-                    <br />
-                    <p class="hs-cardText">
-                      Manutenção, melhorias e acompanhamento pós-entrega.
-                    </p>
-                    <ul class="hs-list">
-                      <li>Ajustes rápidos</li>
-                      <li>Melhorias contínuas</li>
-                      <li>Plano mensal</li>
-                    </ul>
-                    <a class="btn btn-ghost btn-sm mt-3" href="#contact"
-                      >Quero isso</a
-                    >
-                  </div>
-                </div>
-              </article>
+          <div class="col-12">
+            <div class="hero__logos reveal" aria-label="Partners">
+              <span>Links Personalizados</span>
+              <span>Sites</span>
+              <span>e-commerce</span>
+              <span>Branding</span>
+              <span>Google Maps</span>
+              <span>SEO</span>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- PORTFOLIO -->
-      <section id="portfolio" class="hs-section">
-        <div class="container">
-          <div class="text-center mb-4">
-            <div class="hs-kicker">PORTFÓLIO</div>
-            <h2 class="hs-h2 mb-2">Projetos que transformam negócios</h2>
-          </div>
-
-          <div class="d-flex justify-content-center mb-4">
-            <div class="hs-tabs">
-              <button class="hs-tab is-active" type="button" data-filter="all">
-                Todos
-              </button>
-              <button class="hs-tab" type="button" data-filter="site">
-                Site
-              </button>
-              <button class="hs-tab" type="button" data-filter="ecommerce">
-                E-commerce
-              </button>
-            </div>
-          </div>
-
-          <div class="row g-3 g-lg-4" id="portfolioGrid">
-            <!-- Card -->
-            <div class="col-12 col-md-6 col-lg-4" data-cat="site">
-              <article class="hs-card hs-card--project h-100">
-                <div
-                  class="hs-thumb"
-                  style="
-                    background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80&auto=format&fit=crop');
-                  "
-                ></div>
-                <div class="p-3">
-                  <div
-                    class="d-flex align-items-center justify-content-between mb-2"
-                  >
-                    <span class="hs-badge hs-badge--purple">SITE</span>
-                    <small class="text-white-50"
-                      ><i class="las la-clock me-1"></i>2 semanas</small
-                    >
-                  </div>
-                  <h3 class="hs-cardTitle mb-1">Landing de Serviços</h3>
-                  <p class="hs-cardText mb-3">
-                    Página com foco em conversão, CTA e performance.
-                  </p>
-                  <a class="btn btn-gradient btn-sm" href="#">Ver detalhes</a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-cat="ecommerce">
-              <article class="hs-card hs-card--project h-100">
-                <div
-                  class="hs-thumb"
-                  style="
-                    background-image: url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=1200&q=80&auto=format&fit=crop');
-                  "
-                ></div>
-                <div class="p-3">
-                  <div
-                    class="d-flex align-items-center justify-content-between mb-2"
-                  >
-                    <span class="hs-badge hs-badge--green">E-COM</span>
-                    <small class="text-white-50"
-                      ><i class="las la-bolt me-1"></i>rápido</small
-                    >
-                  </div>
-                  <h3 class="hs-cardTitle mb-1">Loja Virtual</h3>
-                  <p class="hs-cardText mb-3">
-                    Vitrine + catálogo com UX claro e CTA direto.
-                  </p>
-                  <a class="btn btn-gradient btn-sm" href="#">Ver detalhes</a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-cat="sistema">
-              <article class="hs-card hs-card--project h-100">
-                <div
-                  class="hs-thumb"
-                  style="
-                    background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80&auto=format&fit=crop');
-                  "
-                ></div>
-                <div class="p-3">
-                  <div
-                    class="d-flex align-items-center justify-content-between mb-2"
-                  >
-                    <span class="hs-badge">SISTEMA</span>
-                    <small class="text-white-50"
-                      ><i class="las la-lock me-1"></i>seguro</small
-                    >
-                  </div>
-                  <h3 class="hs-cardTitle mb-1">Painel Administrativo</h3>
-                  <p class="hs-cardText mb-3">
-                    Dashboard com métricas e controle de conteúdo.
-                  </p>
-                  <a class="btn btn-gradient btn-sm" href="#">Ver detalhes</a>
-                </div>
-              </article>
-            </div>
-
-            <!-- Repete mais 3 para ficar igual ao “site real” -->
-            <div class="col-12 col-md-6 col-lg-4" data-cat="site">
-              <article class="hs-card hs-card--project h-100">
-                <div
-                  class="hs-thumb"
-                  style="
-                    background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format&fit=crop');
-                  "
-                ></div>
-                <div class="p-3">
-                  <div
-                    class="d-flex align-items-center justify-content-between mb-2"
-                  >
-                    <span class="hs-badge hs-badge--purple">SITE</span>
-                    <small class="text-white-50"
-                      ><i class="las la-clock me-1"></i>1 semana</small
-                    >
-                  </div>
-                  <h3 class="hs-cardTitle mb-1">Site Institucional</h3>
-                  <p class="hs-cardText mb-3">
-                    Estrutura clara para credibilidade e SEO.
-                  </p>
-                  <a class="btn btn-gradient btn-sm" href="#">Ver detalhes</a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-cat="ecommerce">
-              <article class="hs-card hs-card--project h-100">
-                <div
-                  class="hs-thumb"
-                  style="
-                    background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1200&q=80&auto=format&fit=crop');
-                  "
-                ></div>
-                <div class="p-3">
-                  <div
-                    class="d-flex align-items-center justify-content-between mb-2"
-                  >
-                    <span class="hs-badge hs-badge--green">E-COM</span>
-                    <small class="text-white-50"
-                      ><i class="las la-bolt me-1"></i>otimizado</small
-                    >
-                  </div>
-                  <h3 class="hs-cardTitle mb-1">Catálogo de Produtos</h3>
-                  <p class="hs-cardText mb-3">
-                    Cards, filtros e performance no carregamento.
-                  </p>
-                  <a class="btn btn-gradient btn-sm" href="#">Ver detalhes</a>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-cat="sistema">
-              <article class="hs-card hs-card--project h-100">
-                <div
-                  class="hs-thumb"
-                  style="
-                    background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80&auto=format&fit=crop');
-                  "
-                ></div>
-                <div class="p-3">
-                  <div
-                    class="d-flex align-items-center justify-content-between mb-2"
-                  >
-                    <span class="hs-badge">SISTEMA</span>
-                    <small class="text-white-50"
-                      ><i class="las la-lock me-1"></i>controle</small
-                    >
-                  </div>
-                  <h3 class="hs-cardTitle mb-1">Sistema de Atendimento</h3>
-                  <p class="hs-cardText mb-3">
-                    Fluxo e organização interna (CRM/Chamados).
-                  </p>
-                  <a class="btn btn-gradient btn-sm" href="#">Ver detalhes</a>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ABOUT -->
-      <section id="about" class="hs-section">
-        <div class="container">
-          <div class="row g-3 g-lg-4 align-items-stretch">
-            <div class="col-12 col-lg-7">
-              <article class="hs-card h-100 p-4 p-lg-5">
-                <div class="hs-kicker">SOBRE</div>
-                <h2 class="hs-h2 mb-3">
-                  Somos especialistas em transformação digital
-                </h2>
-                <p class="hs-sub mb-4">
-                  A HeinSoft entrega projetos com processo claro: briefing,
-                  design, desenvolvimento e deploy — com foco em performance,
-                  SEO e segurança.
-                </p>
-
-                <div class="row g-3">
-                  <div class="col-12 col-md-6">
-                    <div class="hs-miniCard">
-                      <div class="hs-miniCard__title">Foco em resultado</div>
-                      <div class="hs-miniCard__text">
-                        Estratégia + conversão + performance.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <div class="hs-miniCard">
-                      <div class="hs-miniCard__title">Qualidade no design</div>
-                      <div class="hs-miniCard__text">
-                        Interface moderna e bem construída.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <div class="hs-miniCard">
-                      <div class="hs-miniCard__title">Tecnologia & Deploy</div>
-                      <div class="hs-miniCard__text">
-                        Código limpo e deploy seguro.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <div class="hs-miniCard">
-                      <div class="hs-miniCard__title">Processo claro</div>
-                      <div class="hs-miniCard__text">
-                        Você acompanha cada etapa.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="d-flex flex-column flex-sm-row gap-2 mt-4">
-                  <a
-                    class="btn btn-gradient"
-                    href="https://wa.me/5581993193905"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <i class="lab la-whatsapp me-1"></i> Falar com a HeinSoft
-                  </a>
-                  <a class="btn btn-ghost" href="#services">Ver serviços</a>
-                </div>
-
-                <div class="row g-3 mt-4">
-                  <div class="col-4">
-                    <div class="hs-metric">
-                      <div class="hs-metric__num">10+</div>
-                      <div class="hs-metric__label">Projetos</div>
-                    </div>
-                  </div>
-                  <div class="col-4">
-                    <div class="hs-metric">
-                      <div class="hs-metric__num">98%</div>
-                      <div class="hs-metric__label">Satisfação</div>
-                    </div>
-                  </div>
-                  <div class="col-4">
-                    <div class="hs-metric">
-                      <div class="hs-metric__num">3+</div>
-                      <div class="hs-metric__label">Anos</div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-12 col-lg-5">
-              <article class="hs-card h-100 p-4 p-lg-5">
-                <div
-                  class="d-flex align-items-center justify-content-between mb-3"
-                >
-                  <div class="hs-kicker m-0">DIFERENCIAIS</div>
-                  <span class="hs-badge hs-badge--green">HeinSoft</span>
-                </div>
-
-                <div class="hs-checklist">
-                  <div class="hs-check">
-                    <i class="las la-check-circle"></i> SEO técnico bem feito
-                  </div>
-                  <div class="hs-check">
-                    <i class="las la-check-circle"></i> Performance e boas
-                    práticas
-                  </div>
-                  <div class="hs-check">
-                    <i class="las la-check-circle"></i> Identidade visual
-                    consistente
-                  </div>
-                  <div class="hs-check">
-                    <i class="las la-check-circle"></i> Suporte e manutenção
-                  </div>
-                </div>
-
-                <div class="hs-divider my-4"></div>
-
-                <p class="hs-cardText mb-0">
-                  “Não é só um site bonito: é um projeto pronto pra vender e
-                  ranquear.”
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- REVIEWS -->
-      <section id="reviews" class="hs-section">
-        <div class="container">
-          <div class="text-center mb-4">
-            <div class="hs-kicker">AVALIAÇÕES</div>
-            <h2 class="hs-h2 mb-2">O que nossos clientes dizem</h2>
-            <p class="hs-sub mx-auto">
-              Substitua pelos depoimentos reais quando quiser.
-            </p>
-          </div>
-
-          <div class="row g-3 g-lg-4">
-            <div class="col-12 col-md-6">
-              <article class="hs-card p-4 h-100">
-                <div class="hs-stars mb-2">
-                  <i class="las la-star"></i><i class="las la-star"></i
-                  ><i class="las la-star"></i><i class="las la-star"></i
-                  ><i class="las la-star"></i>
-                </div>
-                <p class="hs-cardText mb-3">
-                  Entrega rápida, site leve e muito bem feito. A estrutura ficou
-                  profissional e fácil de editar.
-                </p>
-                <div class="d-flex align-items-center gap-2">
-                  <div class="hs-avatar">M</div>
-                  <div>
-                    <div class="fw-bold">Mariana Silva</div>
-                    <small class="text-white-50">Empreendedora</small>
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-12 col-md-6">
-              <article class="hs-card p-4 h-100">
-                <div class="hs-stars mb-2">
-                  <i class="las la-star"></i><i class="las la-star"></i
-                  ><i class="las la-star"></i><i class="las la-star"></i
-                  ><i class="las la-star"></i>
-                </div>
-                <p class="hs-cardText mb-3">
-                  O suporte e a organização do processo foram impecáveis. O
-                  resultado final ficou acima do esperado.
-                </p>
-                <div class="d-flex align-items-center gap-2">
-                  <div class="hs-avatar">C</div>
-                  <div>
-                    <div class="fw-bold">Carlos Eduardo</div>
-                    <small class="text-white-50">Negócio local</small>
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-12 col-md-6">
-              <article class="hs-card p-4 h-100">
-                <div class="hs-stars mb-2">
-                  <i class="las la-star"></i><i class="las la-star"></i
-                  ><i class="las la-star"></i><i class="las la-star"></i
-                  ><i class="las la-star"></i>
-                </div>
-                <p class="hs-cardText mb-3">
-                  Site funcionando perfeito no celular. Agora a marca passa
-                  muito mais credibilidade.
-                </p>
-                <div class="d-flex align-items-center gap-2">
-                  <div class="hs-avatar">A</div>
-                  <div>
-                    <div class="fw-bold">Ana Beatriz</div>
-                    <small class="text-white-50">Loja online</small>
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-12 col-md-6">
-              <article class="hs-card p-4 h-100">
-                <div class="hs-stars mb-2">
-                  <i class="las la-star"></i><i class="las la-star"></i
-                  ><i class="las la-star"></i><i class="las la-star"></i
-                  ><i class="las la-star"></i>
-                </div>
-                <p class="hs-cardText mb-3">
-                  SEO e performance foi o diferencial. Meu negócio começou a
-                  aparecer melhor no Google.
-                </p>
-                <div class="d-flex align-items-center gap-2">
-                  <div class="hs-avatar">R</div>
-                  <div>
-                    <div class="fw-bold">Rafael Mendes</div>
-                    <small class="text-white-50">Serviços</small>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="hs-section">
-        <div class="container">
-          <div class="text-center mb-4">
-            <div class="hs-kicker">CONTATO</div>
-            <h2 class="hs-h2 mb-2">Vamos criar algo incrível juntos?</h2>
-            <p class="hs-sub mx-auto">
-              Me diga o que você precisa e eu te respondo com clareza.
-            </p>
-          </div>
-
-          <div class="row g-3 g-lg-4">
-            <div class="col-12 col-lg-5">
-              <article class="hs-card p-4 h-100">
-                <h3 class="hs-cardTitle mb-3">Fale com a HeinSoft</h3>
-
-                <div class="hs-contactItem">
-                  <div class="hs-contactIcon">
-                    <i class="las la-envelope"></i>
-                  </div>
-                  <div>
-                    <div class="fw-bold">E-mail</div>
-                    <small class="text-white-50">contato@heinsoft.com.br</small>
-                  </div>
-                </div>
-
-                <div class="hs-contactItem">
-                  <div class="hs-contactIcon">
-                    <i class="lab la-whatsapp"></i>
-                  </div>
-                  <div>
-                    <div class="fw-bold">WhatsApp</div>
-                    <small class="text-white-50">+55 (81) 99319-3905</small>
-                  </div>
-                </div>
-
-                <div class="hs-contactItem">
-                  <div class="hs-contactIcon">
-                    <i class="las la-map-marker"></i>
-                  </div>
-                  <div>
-                    <div class="fw-bold">Local</div>
-                    <small class="text-white-50">Gravatá - PE</small>
-                  </div>
-                </div>
-
-                <a
-                  class="btn btn-gradient w-100 mt-3"
-                  href="https://wa.me/5581993193905"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <i class="lab la-whatsapp me-1"></i> Conversar no WhatsApp
-                </a>
-              </article>
-            </div>
-
-            <div class="col-12 col-lg-7">
-              <article class="hs-card p-4 h-100">
-                <h3 class="hs-cardTitle mb-3">Enviar mensagem</h3>
-
-                <form id="contactForm" class="row g-3">
-                  <div class="col-12 col-md-6">
-                    <label class="form-label text-white-50">Nome</label>
-                    <input
-                      class="form-control hs-input"
-                      name="name"
-                      type="text"
-                      placeholder="Seu nome"
-                      required
-                    />
-                  </div>
-
-                  <div class="col-12 col-md-6">
-                    <label class="form-label text-white-50">E-mail</label>
-                    <input
-                      class="form-control hs-input"
-                      name="email"
-                      type="email"
-                      placeholder="Seu e-mail"
-                      required
-                    />
-                  </div>
-
-                  <div class="col-12">
-                    <label class="form-label text-white-50">Mensagem</label>
-                    <textarea
-                      class="form-control hs-input"
-                      name="message"
-                      rows="6"
-                      placeholder="Conte um pouco sobre o seu projeto..."
-                      required
-                    ></textarea>
-                  </div>
-
-                  <div class="col-12 d-flex flex-column flex-sm-row gap-2">
-                    <button class="btn btn-gradient" type="submit">
-                      Enviar mensagem <i class="las la-arrow-right ms-1"></i>
-                    </button>
-                    <button class="btn btn-ghost" type="button" id="btnClear">
-                      Limpar
-                    </button>
-                  </div>
-
-                  <div class="col-12">
-                    <small class="text-white-50">
-                      *Formulário para atendimento Personalizado!
-                    </small>
-                  </div>
-                </form>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="hs-section pt-0">
+    <!-- About -->
+    <section class="section" id="about">
       <div class="container">
-        <div class="hs-divider mb-4"></div>
+        <div class="split row g-4 align-items-start">
+          <div class="split__left reveal col-12 col-lg-5">
+            <p class="eyebrow">Sobre Nós</p>
+            <h2 class="h2">
+              Nosso objetivo: Ajudar negócios locais a conquistarem espaço na internet.
+            </h2>
+          </div>
 
-        <div class="row g-4">
-          <div class="col-12 col-lg-4">
-            <div class="hs-brand mb-2">HeinSoft</div>
-            <p class="hs-sub mb-3">
-              Sites modernos, rápidos e otimizados — com processo claro e foco
-              em resultados.
-            </p>
+          <div class="split__right reveal col-12 col-lg-7">
+            <p class="muted">Design, performance e presença digital.</p>
 
-            <div class="d-flex gap-2">
-              <a
-                class="hs-social"
-                href="https://www.instagram.com/heinsoftcompany"
-                target="_blank"
-                rel="noopener"
-                aria-label="Instagram"
-              >
-                <i class="lab la-instagram"></i>
-              </a>
-              <a
-                class="hs-social"
-                href="https://github.com/HeinSoftCompany"
-                target="_blank"
-                rel="noopener"
-                aria-label="GitHub"
-              >
-                <i class="lab la-github"></i>
-              </a>
-              <a
-                class="hs-social"
-                href="https://wa.me/5581993193905"
-                target="_blank"
-                rel="noopener"
-                aria-label="WhatsApp"
-              >
-                <i class="lab la-whatsapp"></i>
-              </a>
+            <div class="about-card">
+              <div class="about-card__media">
+                <div class="bubble">
+                  <span class="bubble__dot"></span>
+                  <span class="bubble__dot"></span>
+                  <span class="bubble__dot"></span>
+                </div>
+              </div>
+
+              <div class="about-card__text">
+                <h3 class="h3">Creative Agency</h3>
+                <p class="muted">
+                  From landing pages to complete design systems — we build consistent,
+                  scalable experiences.
+                </p>
+                <a class="link" href="#services">Learn more →</a>
+              </div>
             </div>
-          </div>
-
-          <div class="col-6 col-lg-2">
-            <div class="hs-footTitle">Serviços</div>
-            <ul class="hs-footList">
-              <li><a href="#services">Site</a></li>
-              <li><a href="#services">E-commerce</a></li>
-              <li><a href="#services">UI/UX</a></li>
-              <li><a href="#services">SEO</a></li>
-            </ul>
-          </div>
-
-          <div class="col-6 col-lg-2">
-            <div class="hs-footTitle">Empresa</div>
-            <ul class="hs-footList">
-              <li><a href="#about">Sobre</a></li>
-              <li><a href="#portfolio">Projetos</a></li>
-              <li><a href="#reviews">Avaliações</a></li>
-              <li><a href="#contact">Contato</a></li>
-            </ul>
-          </div>
-
-          <div class="col-12 col-lg-4">
-            <div class="hs-footTitle">Legal</div>
-            <ul class="hs-footList">
-              <li><a href="/sections/terms.html">Termos de uso</a></li>
-              <li>
-                <a href="/sections/privacy.html">Política de privacidade</a>
-              </li>
-              <li><a href="/sections/support.html">Suporte</a></li>
-            </ul>
           </div>
         </div>
 
-        <div class="hs-footerBottom text-center text-white-50">
-          <small>© 2026 HeinSoft Company. Todos os direitos reservados.</small>
+        <div class="divider"></div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="services-head reveal row g-4 align-items-end">
+          <div class="col-12 col-lg-8">
+            <p class="eyebrow">Oferecemos</p>
+            <h2 class="h2">Soluções de Design<br />Experiências impactantes e claras</h2>
+          </div>
+          <div class="col-12 col-lg-8">
+            <p class="muted">Escolha o serviço desejado e mantemos alinhado a:</p>
+          </div>
+        </div>
+
+        <div class="services-list">
+          <article class="service reveal">
+            <span class="service__index">01</span>
+            <h3 class="service__title">Estratégia</h3>
+          </article>
+
+          <article class="service reveal">
+            <span class="service__index">02</span>
+            <h3 class="service__title">Identidade</h3>
+          </article>
+
+          <article class="service reveal">
+            <span class="service__index">03</span>
+            <h3 class="service__title">Experiência</h3>
+          </article>
+
+          <article class="service reveal">
+            <span class="service__index">04</span>
+            <h3 class="service__title">Desenvolvimento</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects-lusion section" id="projects">
+      <div class="container">
+        <header class="projects-lusion__head reveal">
+          <div class="projects-lusion__top">
+            <span class="eyebrow">Projects</span>
+
+            <a class="projects-lusion__count" href="#projects-grid" aria-label="See all projects">
+              <span class="projects-lusion__num">10</span>
+              <span class="projects-lusion__arrow">↘</span>
+            </a>
+          </div>
+
+          <h2 class="projects-lusion__title">PROJECTS</h2>
+
+          <p class="projects-lusion__desc muted">
+            Seleção de projetos com foco em design, performance e experiência.
+          </p>
+        </header>
+
+        <div class="projects-lusion__grid" id="projects-grid">
+          <a class="pCard reveal" href="#" data-parallax>
+            <div class="pCard__media">
+              <img src="/assets/project-1.jpg" alt="Projeto 01" />
+            </div>
+            <div class="pCard__meta">
+              <span class="pCard__tag">Web</span>
+              <h3 class="pCard__name">Landing Premium</h3>
+              <p class="pCard__sub muted">UI • Motion • Conversion</p>
+            </div>
+          </a>
+
+          <a class="pCard reveal" href="#" data-parallax>
+            <div class="pCard__media">
+              <img src="/assets/project-2.jpg" alt="Projeto 02" />
+            </div>
+            <div class="pCard__meta">
+              <span class="pCard__tag">E-com</span>
+              <h3 class="pCard__name">Loja Virtual</h3>
+              <p class="pCard__sub muted">Design • SEO • Performance</p>
+            </div>
+          </a>
+
+          <a class="pCard reveal" href="#" data-parallax>
+            <div class="pCard__media">
+              <img src="/assets/project-3.jpg" alt="Projeto 03" />
+            </div>
+            <div class="pCard__meta">
+              <span class="pCard__tag">Sistema</span>
+              <h3 class="pCard__name">Painel Admin</h3>
+              <p class="pCard__sub muted">UX • Acessibilidade • UI</p>
+            </div>
+          </a>
+
+          <a class="pCard reveal" href="#" data-parallax>
+            <div class="pCard__media">
+              <img src="/assets/project-4.jpg" alt="Projeto 04" />
+            </div>
+            <div class="pCard__meta">
+              <span class="pCard__tag">Brand</span>
+              <h3 class="pCard__name">Identidade</h3>
+              <p class="pCard__sub muted">Logo • Sistema • Guideline</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="center-head reveal">
+          <p class="eyebrow">Reviews</p>
+          <h2 class="h2">What Our Clients Are Saying...</h2>
+          <p class="muted">Real feedback from real collaborations.</p>
+        </div>
+
+        <div class="testimonials">
+          <article class="tcard reveal">
+            <p class="tcard__text">
+              “Clean, modern and fast. The layout feels premium and the UX is straightforward.”
+            </p>
+            <div class="tcard__user">
+              <img src="/assets/avatar-1.jpg" alt="" />
+              <div>
+                <strong>R. Lima</strong>
+                <span class="muted">Founder</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="tcard reveal">
+            <p class="tcard__text">
+              “They understood the brand quickly. Our landing page conversions improved in the first week.”
+            </p>
+            <div class="tcard__user">
+              <img src="/assets/avatar-2.jpg" alt="" />
+              <div>
+                <strong>Lea</strong>
+                <span class="muted">Marketing</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="tcard reveal">
+            <p class="tcard__text">
+              “Amazing visual system. Everything stays consistent from social to website.”
+            </p>
+            <div class="tcard__user">
+              <img src="/assets/avatar-3.jpg" alt="" />
+              <div>
+                <strong>R. Chan</strong>
+                <span class="muted">CEO</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="tcard reveal">
+            <p class="tcard__text">
+              “Great communication, strong UI decisions, and the final delivery was very organized.”
+            </p>
+            <div class="tcard__user">
+              <img src="/assets/avatar-4.jpg" alt="" />
+              <div>
+                <strong>Test</strong>
+                <span class="muted">Product</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="section story-section" id="story">
+      <div class="container">
+        <div class="story-layout">
+          <div class="story-copy reveal">
+            <p class="eyebrow">Nossa História</p>
+            <h2 class="h2 story-title">
+              Criamos presença digital com estratégia, clareza e execução.
+            </h2>
+            <p class="muted story-text">
+              A HeinSoft nasceu com o objetivo de ajudar negócios locais a se posicionarem melhor na
+              internet, com sites bem construídos, identidade visual consistente e foco em transmitir
+              valor de forma profissional.
+            </p>
+
+            <div class="story-points">
+              <div class="story-point">
+                <strong>Estratégia</strong>
+                <span>Entendimento da marca antes da execução.</span>
+              </div>
+
+              <div class="story-point">
+                <strong>Design</strong>
+                <span>Interfaces modernas com clareza visual.</span>
+              </div>
+
+              <div class="story-point">
+                <strong>Performance</strong>
+                <span>Sites leves, rápidos e bem estruturados.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-visual reveal">
+            <div class="story-orb"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section cta-section" id="contact">
+      <div class="container">
+        <div class="cta-box reveal">
+          <p class="eyebrow">Contato</p>
+
+          <h2 class="cta-title">
+            Vamos criar um site que represente o valor do seu negócio?
+          </h2>
+
+          <br />
+
+          <p class="muted cta-text">
+            Cada projeto começa com uma conversa estratégica para entendermos sua marca,
+            seus objetivos e como apresentar seu serviço da melhor forma na internet.
+          </p>
+
+          <div class="center-actions cta-actions">
+            <button class="btn btn--primary" data-open-modal="quote" type="button">
+              Solicitar orçamento
+            </button>
+
+            <a class="btn btn--ghost" href="#projects">Ver projetos</a>
+          </div>
+
+          <div class="cta-trust">
+            <span>Briefing estratégico</span>
+            <span>Atendimento personalizado</span>
+            <span>Foco em performance</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__bar"></div>
+
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__brand">
+            <div class="brand brand--footer">
+              <span class="brand__dot"></span>
+              <span class="brand__name">HeinSoft Company</span>
+            </div>
+            <p class="muted">Sites modernos com a sua identidade!</p>
+          </div>
+
+          <div class="footer__cols">
+            <div class="fcol">
+              <h4>About</h4>
+              <a href="#about">Sobre Nós</a>
+              <a href="#services">Serviços</a>
+              <a href="#projects">Projetos</a>
+            </div>
+
+            <div class="fcol">
+              <h4>Insights</h4>
+              <a href="#testimonials">Avalie-nos</a>
+              <a href="#story">História</a>
+              <a href="#hero_p">Volte ao topo</a>
+            </div>
+
+            <div class="fcol">
+              <h4>Contact</h4>
+              <a href="#">Email</a>
+              <a href="#">Instagram</a>
+              <a href="#">Behance</a>
+            </div>
+          </div>
+
+          <div class="footer__copy muted">
+            © <span id="year"></span> HeinSoft Company. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Modal: Quote -->
+    <div class="modal" id="quoteModal" aria-hidden="true" role="dialog" aria-labelledby="quoteTitle">
+      <div class="modal__backdrop" data-close-modal></div>
 
-    <!-- Vite entry -->
+      <div class="modal__panel" role="document">
+        <div class="modal__head">
+          <h3 class="h3" id="quoteTitle">Orçamento</h3>
+          <button class="icon-btn" aria-label="Close" data-close-modal type="button">✕</button>
+        </div>
+
+        <form class="form" id="quoteForm">
+          <label>
+            <span>Name</span>
+            <input required name="name" type="text" placeholder="Seu nome" />
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input required name="email" type="email" placeholder="seu@email.com" />
+          </label>
+
+          <label>
+            <span>Projeto</span>
+            <select name="project">
+              <option value="" selected disabled>Selecione o serviço desejado</option>
+              <option value="landing-page">Landing Page</option>
+              <option value="site-institucional">Site Institucional</option>
+              <option value="e-commerce">E-commerce</option>
+              <option value="google-maps">Google Maps</option>
+              <option value="links-personalizados">Links Personalizados</option>
+              <option value="identidade-visual">Identidade Visual</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Mensagem</span>
+            <textarea name="message" rows="4" placeholder="Nos conte o que você precisa..."></textarea>
+          </label>
+
+          <button class="btn btn--primary" type="submit">Enviar</button>
+
+          <p class="muted form__hint">
+            *Após escolher o serviço, agendaremos uma reunião para entender melhor sua marca e os objetivos do projeto.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

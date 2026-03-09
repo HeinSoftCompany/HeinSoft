@@ -1,0 +1,48 @@
+.btn{
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform .15s ease, background .2s ease, border-color .2s ease;
+  user-select: none;
+
+  &:active{
+    transform: translateY(1px);
+  }
+}
+
+.btn--primary{
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #06101a;
+  font-weight: 700;
+
+  &:hover{
+    filter: brightness(1.05);
+  }
+}
+
+.btn--ghost{
+  background: rgba(255,255,255,.05);
+  border-color: rgba(255,255,255,.10);
+  color: rgba(255,255,255,.90);
+
+  &:hover{
+    background: rgba(255,255,255,.07);
+    border-color: rgba(255,255,255,.14);
+  }
+}
+
+.icon-btn{
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.05);
+  color: rgba(255,255,255,.9);
+  cursor: pointer;
+}

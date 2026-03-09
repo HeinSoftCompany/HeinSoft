@@ -10,13 +10,13 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "bootstrap": "^5.3.7",
+    "bootstrap": "^5.3.8",
     "gsap": "^3.13.0"
   },
   "devDependencies": {
     "cross-env": "^10.1.0",
     "prettier": "^3.6.2",
-    "sass": "^1.89.2",
+    "sass": "^1.97.3",
     "vite": "^6.3.5"
   }
 }
