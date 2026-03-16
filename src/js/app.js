@@ -164,11 +164,40 @@ closers.forEach((btn) => {
 $('#quoteForm')?.addEventListener('submit', (e) => {
   e.preventDefault()
 
-  const fd = new FormData(e.currentTarget)
-  const name = (fd.get('name') || 'there').toString().trim()
+  const form = e.currentTarget
+  const fd = new FormData(form)
 
-  alert(`Obrigado, ${name}! Seu pedido foi capturado. (demo)`)
-  e.currentTarget.reset()
+  const name = (fd.get('name') || '').toString().trim()
+  const email = (fd.get('email') || '').toString().trim()
+  const project = (fd.get('project') || '').toString().trim()
+  const message = (fd.get('message') || '').toString().trim()
+
+  const phone = '5581993193905' // troque pelo seu número
+
+  const projectLabels = {
+    'landing-page': 'Landing Page',
+    'site-institucional': 'Site Institucional',
+    'e-commerce': 'E-commerce',
+    'google-maps': 'Google Maps',
+    'links-personalizados': 'Links Personalizados',
+    'identidade-visual': 'Identidade Visual'
+  }
+
+  const projectText = projectLabels[project] || project || 'Não informado'
+
+  const text =
+`Olá! Vim pelo site da HeinSoft e quero solicitar um orçamento.
+
+Nome: ${name}
+Email: ${email}
+Serviço: ${projectText}
+Mensagem: ${message || 'Não informada'}`
+
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`
+
+  window.open(url, '_blank')
+
+  form.reset()
   closeModal(quoteModal)
 })
 
